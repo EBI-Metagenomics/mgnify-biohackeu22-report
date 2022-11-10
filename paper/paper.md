@@ -15,8 +15,6 @@ authors:
 affiliations:
   - name: EMBL-EBI
     index: 1
-  - name: Second Affiliation
-    index: 2
 date: 10 November 2022
 cito-bibliography: paper.bib
 event: BH22EU
@@ -42,7 +40,9 @@ In the last year, MGnify launched a Notebook Server to provide an online, Jupyte
 This ready to use environment and example analysis notebooks bridge the gap between the ease but limitations of browsing the MGnify website, and the complexity but possibilities of installing a local environment to work with data stored in MGnify. 
 Particular goals of the Notebook Server include reproducible downstream analyses, user empowerment through best-practice examples and fast workflows from datasets to publication-ready graphics, and code-as-documentation training materials for users of MGnify.
 
-As a young resource, there were potential improvements to be made across the entire technology and content stack.
+As a young resource, there were potential improvements to be made across the entire technology and content stack (Figure 1).
+
+![Schematic of the Notebooks Server technology stack](./notebooks-server-schematic.png)
 
 # Results
 
@@ -62,6 +62,6 @@ As a young resource, there were potential improvements to be made across the ent
 
 ## Acknowledgements
 
-...
+Elixir, HoloFood
 
 ## References
