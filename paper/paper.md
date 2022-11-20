@@ -106,11 +106,20 @@ For example, a user could load a MGnify genome and its GFF annotation file, and 
 ## Notebooks covering MGnify's metagenome-assembled genomes
 
 # Discussion
+MGnify's publicly available Jupyter Lab instances and notebooks are a collection of resources to empower the microbiome resarch community with streamlines access to EMBL-EBI's metagenomic-derived datasets. Though "code as documentation" and ready-to-use compute environments, users can acomplish short programmatic access tasks – like building a TSV file of data requiring multiple API requests – or follow more in-depth analysis workflows than are possible on the MGnify website – like cross-study comparisons.
 
-...
+During and around BioHackathon Europe 2022, we developed this resource at multiple levels.
+At the infrastructure level, the MGnify notebooks are now an interactive tool on the Galaxy Europe platform.
+At the content level, notebooks were developed related to cover widely used datasets including MGnify Genomes and the MGnify Protein Database.
+At the interface level, Jupyter Lab extensions and widgets were developed to improve interopability of the notebooks with the wider ecosystem.
+Finally in terms of community engagement and future expansion, we have created shorter workflows for suggesting, requesting and contributing new notebooks in future. A [Taskfile](https://taskfile.dev) simplifies the development experience and GitHub issue templates encourage community suggestions.
 
 ## Acknowledgements
 
-Elixir, HoloFood
+We thank ELIXIR, the research infrastructure for Life-science data, and the organisers of BioHackathon Europe 2022 for funding the travel costs of some authors.
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 817729.
+
+We are grateful to Grace Hall and Björn Grüning for their suggestions and involvement during BioHackathon Europe 2022.
 
 ## References
