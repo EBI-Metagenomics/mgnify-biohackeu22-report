@@ -126,32 +126,7 @@ with APISession("https://www.ebi.ac.uk/metagenomics/api/v1") as mgnify:
 
 - The third section is related to the dataset exploration. For examples, it describes how to check for missing values, how to easily get statistical metrics (average, standard deviation, minimum, maximum) on numerical columns such as the genome GC-content or length \ref{data-exploration}. 
 
-![Dataset exploration. left: gc-content statistics, right: Most represented genus in our dataset, . \label{data-exploration}](
-+-------+---------------------+
-|summary|attributes.gc-content|
-+-------+---------------------+
-|  count|                 9421|
-|   mean|   47.951392633478235|
-| stddev|   10.364966184467969|
-|    min|                22.94|
-|    max|                74.84|
-+-------+---------------------+
-
-
-+--------------+-----+
-|         genus|count|
-+--------------+-----+
-| g__Prevotella|  351|
-|        g__RC9|  152|
-|           g__|  325|
-|g__Collinsella|  584|
-+--------------+-----+
-
-+------------+------------+-----------+-----------+------------+-----------+-------------+
-|domain_count|phylum_count|class_count|order_count|family_count|genus_count|species_count|
-+------------+------------+-----------+-----------+------------+-----------+-------------+
-|           2|          56|        107|        293|         585|       1991|         6263|
-+------------+------------+-----------+-----------+------------+-----------+-------------+
+![Genome dataset exploration: a) Whole dataset gc-content statistics; b) Most represented genus in our dataset; c) Genome count per taxonomic ranks. \label{data-exploration}](paper/figures/tables_section_3.eps
 )
 
 - The fourth section display some suggestions of plots that can be made from the genome datasets. Three types of graphics are illustrated in this section: Sankey diagram \ref{sankey-diagram}, boxplots \ref{boxplot}, and histograms \ref{histogram}, that the user could use for producing figures for publications.
