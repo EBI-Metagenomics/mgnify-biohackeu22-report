@@ -128,12 +128,8 @@ with APISession("https://www.ebi.ac.uk/metagenomics/api/v1") as mgnify:
 
 ![Genome dataset exploration: a) Whole dataset gc-content statistics; b) Most represented genus in our dataset; c) Genome count per taxonomic ranks. \label{data-exploration}](./figures/tables_section_3.png)
 
-- The fourth section display some suggestions of plots that can be made from the genome datasets. Three types of graphics are illustrated in this section: Sankey diagram \ref{sankey-diagram}, boxplots \ref{boxplot}, and histograms \ref{histogram}, that the user could use for producing figures for publications.
-![Genomes in our dataset corresponding to bacteria from the Lactobacillales order. \label{sankey-diagram}](./figures/sankey_diagram.png)
-
-!['Number of genomes avalaible, genome length and GC-content of bacteria belonging the Lactobacillales order. \label{boxplot}](./figures/lactobacillales_1.png)
-
-![Biome and Catalogue related to bacteria belonging the Lactobacillales order. \label{histogram}](./figures/lactobacillales_2.png)
+- The fourth section display some suggestions of plots that can be made from the genome datasets. Three types of graphics are illustrated in this section: Sankey diagram \ref{graphics a}, boxplots \ref{graphics b}, and histograms \ref{graphics c}, that the user could use for producing figures for publications.
+![Sample of plots: a) Genomes in our dataset corresponding to bacteria from the Lactobacillales order. b) Number of genomes avalaible, genome length and GC-content of bacteria belonging the Lactobacillales order. Biome and Catalogue related to bacteria belonging the Lactobacillales order. \label{graphics}](./figures/graphics_section_4.png)
 
 - Finally, the last section of this notebook describes in simple steps how the users can compare their MAGs to the MGnify's genome-catalogues and determine if your MAGs are novel. In brief, it explains how to create a signature for each MAG using [`Sourmash`](https://sourmash.readthedocs.io/en/latest/index.html#sourmash-in-brief). The signature is then used for searching a correspondance(s) within the [`MAGs catalogue`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes-search/gather) and their corresponding taxonomic lineage as an example. 
 
