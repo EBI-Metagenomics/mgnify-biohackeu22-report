@@ -126,7 +126,7 @@ with APISession("https://www.ebi.ac.uk/metagenomics/api/v1") as mgnify:
 
 - The third section is related to the dataset exploration. For examples, it describes how to check for missing values, how to easily get statistical metrics (average, standard deviation, minimum, maximum) on numerical columns such as the genome GC-content or length \ref{data-exploration}. 
 
-![Genome dataset exploration: a) Whole dataset gc-content statistics; b) Most represented genus in our dataset; c) Genome count per taxonomic ranks. \label{data-exploration}](paper/figures/tables_section_3.png)
+![Genome dataset exploration: a) Whole dataset gc-content statistics; b) Most represented genus in our dataset; c) Genome count per taxonomic ranks. \label{data-exploration}](./figures/tables_section_3.png)
 
 - The fourth section display some suggestions of plots that can be made from the genome datasets. Three types of graphics are illustrated in this section: Sankey diagram \ref{sankey-diagram}, boxplots \ref{boxplot}, and histograms \ref{histogram}, that the user could use for producing figures for publications.
 ![Genomes in our dataset corresponding to bacteria from the Lactobacillales order. \label{sankey-diagram}](./figures/sankey_diagram.png)
