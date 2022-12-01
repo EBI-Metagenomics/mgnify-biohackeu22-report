@@ -108,9 +108,9 @@ Notebooks are a usefull tool to share examples of how to use and connect to the 
 
 During BioHackathon Europe 2022, we created a python notebook giving an non-exhaustive overview of the use of the [`MGnify's metagenome-assembled genomes (MAGs) API`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes). This notebook is divided in five main sections:
 - The first one provide the users with a example of python libraries that can be used to explore and plot data retrieved from the genome API. 
-- The second section illustrates how the query the [`genomes`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes) database from the MGnify API \ref{connect-to-MGnify's-API}, as well as how to save queried data and how to reload previously saved data.
+- The second section illustrates how to query the [`genomes`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes) database from the MGnify API \ref{connect-to-MGnify's-API}, as well as how to save queried data and how to reload previously saved data.
 
-![Query the genome entries corresponding to the *Listeria* genus into a Pandas DataFrame. \label{connect-to-MGnify's-API}](
+![Query the genome entries corresponding to the *Listeria* genus into a Pandas DataFrame. \label{connect-to-MGnify's-API}]()
 ```python
 # variables
 endpoint_name = 'genomes'
@@ -122,18 +122,19 @@ with APISession("https://www.ebi.ac.uk/metagenomics/api/v1") as mgnify:
     resources = map(lambda r: r.json, mgnify.iterate(endpoint_name, filter=search_filter))
     resources_df = pd.json_normalize(resources)
 ```
-)
 
-- The third section is related to the dataset exploration. For examples, it describes how to check for missing values, how to easily get statistical metrics (average, standard deviation, minimum, maximum) on numerical columns such as the genome GC-content or length \ref{data-exploration}. 
+- The third section is related to the dataset exploration. For instance, it describes how to check for missing values, how to easily get statistical metrics (average, standard deviation, minimum, maximum) on numerical columns such as the genome GC-content or length, as well as how to transform columns to query for the most represented genus in the dataset \ref{data-exploration}. 
 
-![Genome dataset exploration: a) Whole dataset gc-content statistics; b) Most represented genus in our dataset; c) Genome count per taxonomic ranks. \label{data-exploration}](./figures/tables_section_3.png)
+![Genome dataset exploration sample: a) Whole dataset gc-content statistics; b) Most represented genuses in our dataset; c) Genome count per taxonomic ranks. \label{data-exploration}](./figures/tables_section_3.png)
 
-- The fourth section display some suggestions of plots that can be made from the genome datasets. Three types of graphics are illustrated in this section: Sankey diagram \ref{graphics a}, boxplots \ref{graphics b}, and histograms \ref{graphics c}, that the user could use for producing figures for publications.
+- The fourth section displays some suggestions of plots that can be made from the genome dataset. Three types of graphics are illustrated in this section: Sankey diagram \ref{graphics a}, boxplots \ref{graphics b}, and histograms \ref{graphics c}, that the user could use for producing figures for publications.
 ![Sample of plots: a) Genomes in our dataset corresponding to bacteria from the Lactobacillales order. b) Number of genomes avalaible, genome length and GC-content of bacteria belonging the Lactobacillales order. c) Biome and Catalogue related to bacteria belonging the Lactobacillales order. \label{graphics}](./figures/graphics_section_4.png)
 
-- Finally, the last section of this notebook describes in simple steps how the users can compare their MAGs to the MGnify's genome-catalogues and determine if your MAGs are novel. In brief, it explains how to create a signature for each MAG using [`Sourmash`](https://sourmash.readthedocs.io/en/latest/index.html#sourmash-in-brief). The signature is then used for searching a correspondance(s) within the [`MAGs catalogue`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes-search/gather) and their corresponding taxonomic lineage as an example. 
+- Finally, the last section of this notebook describes in simple steps how the users can compare their MAGs to the MGnify's genome-catalogues and determine if the MAGs are novel. In brief, it explains how to create a signature for each MAG using [`Sourmash`](https://sourmash.readthedocs.io/en/latest/index.html#sourmash-in-brief). The signature is then used for searching a correspondance(s) within the [`MAGs catalogue`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes-search/gather) and their corresponding taxonomic lineage for instance. 
 
-The code and example used in this notebook allow to illustrate what the users can do from the genomes MGnify's API and allow less experimented users to re-use sample code for their own purpose.
+The code and examples used in this notebook allow to illustrate what the users can do from the genomes MGnify's API and allow less experimented users to re-use sample code for their own purpose. 
+Additional notebooks are planned to enrich the collection, such as a notebook illustrating how to plot data on map \ref{maps}.
+![Map examples: a) Interactive map representing the number of genomes according to their geographical origin. Hovering continents with the mouse curser allows to see the exact count per continent. b) Interactive map representing the localisation of the samples. Each blue dots represents the proportion of samples for a given longitude-latitude set. c) Zoom in b) on a sampling region of interest. d) In addition to the number of samples and the longitude and latitude, hovering the blue dots with the mouse cursor allow the users to display additional related information such as the ID of the study, the sample IDs and the genome IDs, when available. \label{graphics}](./figures/maps.png)
 
 # Discussion
 MGnify's publicly available Jupyter Lab instances and notebooks are a collection of resources to empower the microbiome resarch community with streamlines access to EMBL-EBI's metagenomic-derived datasets. Though "code as documentation" and ready-to-use compute environments, users can acomplish short programmatic access tasks – like building a TSV file of data requiring multiple API requests – or follow more in-depth analysis workflows than are possible on the MGnify website – like cross-study comparisons.
