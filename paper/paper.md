@@ -152,7 +152,8 @@ The third section is related to the dataset exploration. For instance, it descri
 
 ### Plotting data from the genomes resources
 The fourth section displays some suggestions of plots that can be made from the genome dataset. 
-Three types of graphics are illustrated in this section: Sankey diagram \ref{graphics}a, boxplots \ref{graphics}b, and histograms \ref{graphics}c, that the user could use for producing figures for publications.
+Three types of graphics are illustrated in this section: Sankey diagram \ref{graphics} a, boxplots \ref{graphics} b, and histograms \ref{graphics} c, that the user could use for producing figures for publications.
+
 ![Sample of plots: a) Genomes in our dataset corresponding to bacteria from the Lactobacillales order. b) Number of genomes avalaible, genome length and GC-content of bacteria belonging the Lactobacillales order. c) Biome and Catalogue related to bacteria belonging the Lactobacillales order. \label{graphics}](./figures/graphics_section_4.png)
 
 ### Sequence search
