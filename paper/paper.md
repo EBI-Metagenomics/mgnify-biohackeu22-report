@@ -63,18 +63,18 @@ The notebooks are standard Jupyter notebooks and, following installation of the 
 The libraries and versions used are listed in Conda [@anaconda] environment files, which helps accelerate the installation and ensure the reproducibility of environments.
 Finally, the environment and notebooks are packaged as Docker [@merkel2014docker] images and these images are the primary way to use the MGnify Notebooks.
 
-Prior to BioHackathon Europe 2022, MGnify Notebooks were deployed to one publicaly available server: a [ShinyProxy](https://www.shinyproxy.io/) server hosted by EMBL's Bio-IT project.
+Prior to [BioHackathon Europe 2022](https://biohackathon-europe.org/), MGnify Notebooks were deployed to one publicaly available server: a [ShinyProxy](https://www.shinyproxy.io/) server hosted by EMBL's Bio-IT project.
 
 This deployment allows anonymous, no-login-required usage of the notebooks, providing a simple discovery path for new users.
-This also makes the server suitable for "deep-linking": the lack of a login process means notebooks can be launched into a particular state using URL query parameters.
+This also makes the server suitable for "deep-linking": the lack of a login process means notebooks can be easily launched into a particular state using URL query parameters.
 
 However, the resources available on this single server are limited, and need to be constrained per user to prevent abuse.
 Likewise, inactive Jupyter Lab instances need to be quickly shut down and persistence of user data cannot be guaranteed for extended periods of time.
 
 Galaxy [@Galaxy] instances provide infrastructure and environments for scientific computing, including (authenticated) per-user resources for compute and data storage.
-During BioHackathon Europe 2022, we added the MGnify Notebooks Docker images as interactive tools on the [Galaxy Eurpoe](https://usegalaxy.eu/) instance and associated [Galaxy Europe Live](https://live.usegalaxy.eu/) – a Galaxy instance highlighting the interactive tools available on the platform.
+During BioHackathon Europe 2022, we added the MGnify Notebooks as interactive tools on the [Galaxy Eurpoe](https://usegalaxy.eu/) instance and associated [Galaxy Europe Live](https://live.usegalaxy.eu/) – a Galaxy instance highlighting the interactive tools available on the platform.
 
-The Galaxy deployment complements the ShinyProxy deployment by providing persistent data storage for each user, to customise and build upon the notebooks for their own purposes, as well as more powerful compute; whereas the ShinyProxy deployment continues to provide a less isolated environment that can be more tightly coupled to the [MGnify website](https://www.ebi.ac.uk/metagenomics) through deep links.
+The Galaxy deployment complements the ShinyProxy one by providing persistent data storage for each user, to customise and build upon the notebooks for their own purposes, as well as more powerful compute infrastructure; whereas the ShinyProxy deployment continues to provide a less isolated environment that can be more tightly coupled to the [MGnify website](https://www.ebi.ac.uk/metagenomics) through deep links.
 
 ## Enhanced documentation and clearer user journeys
 Previously, users were most likely to discover the MGnify Notebooks resource by following a journey beginning on the MGnify website.
@@ -106,6 +106,15 @@ This enables richer notebook workflows than would otherwise be possible with the
 For example, a user could load a MGnify genome and its GFF annotation file, and when clicking on a coding sequence annotation perform an API (Application Programming Interface) call to the InterPro API [@interpro], constructing a dataframe of relevant protein information.
 
 ## Integration between MGnify's Protein Database and ESM Atlas
+Predicting the 3D structure of proteins is a crucial step in understanding their biology. Meta AI's ESMFold [@ESMfold2] is a tool designed for this purpose, using machine learning for protein structure prediction.
+
+The [ESM Metagenomic Atlas](https://esmatlas.com/) is a comprehensive repository of protein structures that have been generated using the ESMFold tool, sourced from the MGnify Protein DB. It serves as a convenient resource for researchers interested in exploring and comparing the structures of proteins predicted by ESMFold. However, the Atlas currently lacks easily accessible metadata for the proteins. This information is stored in flat files on the MGnify FTP server, which can be difficult for many users to access. During the BioHackathon Europe 2022, our team worked on a prototype for a web API that would provide access to this metadata stored in the MGnify Protein DB.
+
+We explored the potential of combining the Atlas and the newly developed API to integrate protein structure with metadata by using a Jupyter notebook. This approach allows researchers to easily access and analyze protein structure and metadata from both MGnify and the ESM Metagenomic Atlas within a single platform. 
+
+TODO: Add screen cap
+
+In addition, this Jupyter notebook includes a section that allows researchers to run a sequence similarity search using the MGnify Sequence Search API, and incorporates the muscle [@MUSCLE] multiple sequence aligner to generate an alignment using the top 10 hits obtained. Overall, this notebook provides a convenient way for users to access and analyze protein structure and metadata in a single platform.
 
 ## Notebooks covering MGnify's metagenome-assembled genomes
 Notebooks are a useful tool to share examples of how to use and connect to the MGnify API. 
