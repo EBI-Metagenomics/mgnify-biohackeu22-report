@@ -50,7 +50,7 @@ This ready to use environment and example analysis notebooks bridge the gap betw
 Particular goals of the Notebook Server include reproducible downstream analyses, user empowerment through best-practice examples and fast workflows from datasets to publication-ready graphics, and code-as-documentation training materials for users of MGnify.
 
 The Notebook Server exists alongside other MGnify support resources including the [formal MGnify documentation](https://docs.mgnify.org) and [EMBL-EBI Training](https://www.ebi.ac.uk/training/) courses and materials.
-More broadly, resources like the [Galaxy Training Network's metagenomics topic](https://training.galaxyproject.org/training-material/topics/metagenomics/) [@sharesAuthorWith:gtn] provide tutorials and compute infrastructure for metagenomics training without a specific focus on one service.
+More broadly, resources like the [Galaxy Training Network's metagenomics topic](https://training.galaxyproject.org/training-material/topics/metagenomics/) [@citesAsAuthority:gtn] provide tutorials and compute infrastructure for metagenomics training without a specific focus on one service.
 In this context the MGnify notebooks' niche is delivering ready-to-use examples of consuming data from the MGnify API (Application Programming Interface) in common downstream metagenomic analysis tasks.
 
 During and around the BioHackathon Europe 2022, we introduced several developments to the "MGnify Notebook Server" ranging from running on new infrastructure to adding new content and documentation.
@@ -96,7 +96,7 @@ We envisage this being useful for:
 ![MGnify-specific guidance is provided in a Jupyter Lab user interface extension \label{help-extension}](./figures/help-extension.png)
 
 ## Improving interoperability of IGV as a Jupyter Lab Widget
-IGV (the Integrative Genomics Viewer) and its javascript implementation `IGV.js` [@IGVjs] are interactive tools for exploring genomes and annotations.
+IGV (the Integrative Genomics Viewer) and its javascript implementation `IGV.js` [@usesMethodIn:IGVjs] are interactive tools for exploring genomes and annotations.
 
 The MGnify website uses `IGV.js` to visualise genomes and assembly contigs from metagenomic-derived datasets.
 Whilst expanding the MGnify notebooks to cover more datatypes, we found a need to include a visualisation like IGV in some notebooks – particularly when developing notebooks to analyse MGnify's Metagenome Assembled Genome (MAG) catalogues.
@@ -108,7 +108,7 @@ In this case, a Python method can be used to instantiate an IGV instance in a no
 During BioHackathon Europe 2022, we contributed a feature to the `igv-jupyterlab` project enabling Python functions – or other Jupyter Lab widgets – to be run when an annotation is clicked in IGV.
 This enables richer notebook workflows than would otherwise be possible with the default IGV behaviour of showing a popup with the focussed annotation's details.
 
-For example, a user could load a MGnify genome and its GFF annotation file, and when clicking on a coding sequence annotation perform an API call to the InterPro API [@interpro], constructing a dataframe of relevant protein information.
+For example, a user could load a MGnify genome and its GFF annotation file, and when clicking on a coding sequence annotation perform an API call to the InterPro API [@usesDataFrom:interpro], constructing a dataframe of relevant protein information.
 
 ## Integration between MGnify's Protein Database and ESM Atlas
 Predicting the 3D structure of proteins is a crucial step in understanding their biology. Meta AI's ESMFold [@citesAsPotentialSolution:ESMfold2] is a tool designed for this purpose, using machine learning for protein structure prediction.
@@ -119,7 +119,7 @@ We explored the potential of combining the Atlas web API and the newly developed
 
 ![Notebook and API developed for the MGnify protein database \label{protein-db}](./figures/proteindb.png)
 
-In addition, this Jupyter notebook includes a section that allows researchers to run a sequence similarity search using the MGnify Sequence Search API, and incorporates the muscle [@MUSCLE] multiple sequence aligner to generate an alignment using the top 10 hits obtained. Overall, this notebook provides a convenient way for users to access and analyze protein structure and metadata in a single platform.
+In addition, this Jupyter notebook includes a section that allows researchers to run a sequence similarity search using the MGnify Sequence Search API, and incorporates the muscle [@usesMethodIn:MUSCLE] multiple sequence aligner to generate an alignment using the top 10 hits obtained. Overall, this notebook provides a convenient way for users to access and analyze protein structure and metadata in a single platform.
 
 ## Notebooks covering MGnify's metagenome-assembled genomes
 Notebooks are a useful tool to share examples of how to use and connect to the MGnify API. 
@@ -175,9 +175,9 @@ Finally, the last section of this notebook describes in simple steps how the use
 In brief, it explains how to create a signature for each MAG using [`Sourmash`](https://sourmash.readthedocs.io/en/latest/index.html#sourmash-in-brief). 
 The signature is then used for searching a correspondance(s) within the [`MAGs catalogue`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes-search/gather) and their corresponding taxonomic lineage for instance. 
 
+![Map examples: a) Interactive map representing the number of genomes according to their geographical origin. Hovering continents with the mouse curser allows to see the exact count per continent. b) Interactive map representing the localisation of the samples. Each blue dots represents the proportion of samples for a given longitude-latitude set. c) Zoom in b) on a sampling region of interest. d) In addition to the number of samples and the longitude and latitude, hovering the blue dots with the mouse cursor allow the users to display additional related information such as the ID of the study, the sample IDs and the genome IDs, when available. \label{maps}](./figures/maps.png)
 The code and examples used in this notebook allow to illustrate what the users can do from the genomes MGnify's API and allow less experimented users to re-use sample code for their own purpose. 
 Additional notebooks are planned to enrich the collection, such as a notebook illustrating how to plot data on map \ref{maps}.
-![Map examples: a) Interactive map representing the number of genomes according to their geographical origin. Hovering continents with the mouse curser allows to see the exact count per continent. b) Interactive map representing the localisation of the samples. Each blue dots represents the proportion of samples for a given longitude-latitude set. c) Zoom in b) on a sampling region of interest. d) In addition to the number of samples and the longitude and latitude, hovering the blue dots with the mouse cursor allow the users to display additional related information such as the ID of the study, the sample IDs and the genome IDs, when available. \label{maps}](./figures/maps.png)
 
 # Discussion
 MGnify's publicly available Jupyter Lab instances and notebooks are a collection of resources to empower the microbiome resarch community with streamlines access to EMBL-EBI's metagenomic-derived datasets. Though "code as documentation" and ready-to-use compute environments, users can acomplish short programmatic access tasks – like building a TSV file of data requiring multiple API requests – or follow more in-depth analysis workflows than are possible on the MGnify website – like cross-study comparisons.
