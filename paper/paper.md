@@ -57,7 +57,7 @@ During and around the BioHackathon Europe 2022, we introduced several developmen
 As a young resource, there were potential improvements to be made across the entire technology and content stack (figure \ref{schematic}).
 Here we describe each of the major areas of development.
 
-![Schematic of the Notebooks Server technology stack \label{schematic}](./notebooks-server-schematic.png)
+![Schematic of the Notebooks Server technology stack \label{schematic}](./figures/notebooks-server-schematic.png)
 
 # Developments
 
@@ -93,7 +93,7 @@ We envisage this being useful for:
 - users needing quick access to MGnify's interactive API browser when fetching data in notebooks
 - users working on the ShinyProxy deployment looking for an environment to save and resume their work.
 
-![MGnify-specific guidance is provided in a Jupyter Lab user interface extension \label{help-extension}](./help-extension.png)
+![MGnify-specific guidance is provided in a Jupyter Lab user interface extension \label{help-extension}](./figures/help-extension.png)
 
 ## Improving interoperability of IGV as a Jupyter Lab Widget
 IGV (the Integrative Genomics Viewer) and its javascript implementation `IGV.js` [@IGVjs] are interactive tools for exploring genomes and annotations.
@@ -117,7 +117,7 @@ The [ESM Metagenomic Atlas](https://esmatlas.com/) is a comprehensive repository
 
 We explored the potential of combining the Atlas web API and the newly developed API to integrate protein structure with metadata by using a Jupyter notebook. This approach allows researchers to easily access and analyze protein structure and metadata from both MGnify and the Atlas within a single platform. 
 
-TODO: Add screen cap
+![Notebook and API developed for the MGnify protein database \label{protein-db}](./figures/proteindb.png)
 
 In addition, this Jupyter notebook includes a section that allows researchers to run a sequence similarity search using the MGnify Sequence Search API, and incorporates the muscle [@MUSCLE] multiple sequence aligner to generate an alignment using the top 10 hits obtained. Overall, this notebook provides a convenient way for users to access and analyze protein structure and metadata in a single platform.
 
