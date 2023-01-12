@@ -132,7 +132,7 @@ This new notebook is divided in five main sections, conceptually building from i
 
 ### Basic libraries
 The first section provides the users with an example of Python libraries that can be used to explore and plot data retrieved from the genome API. 
-In particular this notebook introduces the PySpark [@useMethodIn:pyspark] as one of the libraries the notebooks showcase, adding diversity to the examples.
+In particular this notebook introduces the PySpark [@usesMethodIn:pyspark] as one of the libraries the notebooks showcase, adding diversity to the examples.
 
 
 ### Data access
