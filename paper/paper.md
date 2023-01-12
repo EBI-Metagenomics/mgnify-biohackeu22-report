@@ -23,7 +23,7 @@ affiliations:
     index: 1
   - name: Albert-Ludwigs-Universität Freiburg
     index: 2
-  - name: Utrecht region
+  - name: ETH Zurich
     index: 3
 
 date: 15 December 2022
@@ -178,8 +178,9 @@ Finally, the last section of this notebook describes step-by-step how users can 
 In brief, it explains how to create a signature for each MAG using [`Sourmash`](https://sourmash.readthedocs.io/en/latest/index.html#sourmash-in-brief) [@usesMethodIn:sourmash].
 The signature is then used to search for corresponding MAGs within the [`MAG catalogues`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes-search/gather) and to fetch their corresponding taxonomic lineage for instance. 
 
-![Map examples: a) Interactive map representing the number of genomes according to their geographical origin. Hovering continents with the mouse curser allows to see the exact count per continent. b) Interactive map representing the localisation of the samples. Each blue dots represents the proportion of samples for a given longitude-latitude set. c) Zoom in b) on a sampling region of interest. d) In addition to the number of samples and the longitude and latitude, hovering the blue dots with the mouse cursor allow the users to display additional related information such as the ID of the study, the sample IDs and the genome IDs, when available. \label{maps}](./figures/maps.png)
 The MGnify genomes resource provides geographic extent information for each MAG, so the notebooks also include examples of how this metadata can be visually mapped (figure \ref{maps}).
+
+![Map examples: a) Interactive map representing the number of genomes according to their geographical origin. Hovering continents with the mouse curser allows to see the exact count per continent. b) Interactive map representing the localisation of the samples. Each blue dots represents the proportion of samples for a given longitude-latitude set. c) Zoom in b) on a sampling region of interest. d) In addition to the number of samples and the longitude and latitude, hovering the blue dots with the mouse cursor allow the users to display additional related information such as the ID of the study, the sample IDs and the genome IDs, when available. \label{maps}](./figures/maps.png)
 
 The code and examples used in this notebook illustrate the range of data and features in MGnify's genomes API, and allow less experimented users to re-use sample code for their own purpose. 
 
