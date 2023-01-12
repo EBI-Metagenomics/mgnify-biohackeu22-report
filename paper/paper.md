@@ -45,7 +45,7 @@ authors_short: Rogers, Beracochea, \emph{et al.}
 
 During and around the BioHackathon Europe 2022, we introduced several developments to the "MGnify Notebook Server" ranging from running on new infrastructure to adding new content and documentation.
 
-[MGnify](https://www.ebi.ac.uk/metagenomics) [@10.1093/nar/gkac1080] is EMBL-EBI’s metagenomics resource, which is part of the ELIXIR Metagenomics Community. 
+[MGnify](https://www.ebi.ac.uk/metagenomics) [@10.1093/nar/gkac1080] is EMBL-EBI’s metagenomics resource, which is part of the ELIXIR Metagenomics Emerging Community. 
 In the last year, MGnify launched a Notebook Server to provide an online Jupyter Lab 
 [@Kluyver2016jupyter] environment for users to explore programmatic access to MGnify’s datasets using Python or with R. 
 This ready to use environment and example analysis notebooks bridge the gap between the ease but limitations of browsing the MGnify website, and the complexity but possibilities of installing a local environment to work with data stored in MGnify. 
@@ -72,7 +72,7 @@ However, the resources available on this single server are limited, and need to 
 Likewise, inactive Jupyter Lab instances need to be quickly shut down and persistence of user data cannot be guaranteed for extended periods of time.
 
 Galaxy [@Galaxy] instances provide infrastructure and environments for scientific computing, including (authenticated) per-user resources for compute and data storage.
-During BioHackathon Europe 2022, we added the MGnify Notebooks as interactive tools on the [Galaxy Eurpoe](https://usegalaxy.eu/) instance and associated [Galaxy Europe Live](https://live.usegalaxy.eu/) – a Galaxy instance highlighting the interactive tools available on the platform.
+During BioHackathon Europe 2022, we added the MGnify Notebooks as an interactive tool on the [Galaxy Eurpoe](https://usegalaxy.eu/) instance and associated [Galaxy Europe Live](https://live.usegalaxy.eu/) – a Galaxy instance highlighting the interactive tools available on the platform.
 
 The Galaxy deployment complements the ShinyProxy one by providing persistent data storage for each user, to customise and build upon the notebooks for their own purposes, as well as more powerful compute infrastructure; whereas the ShinyProxy deployment continues to provide a less isolated environment that can be more tightly coupled to the [MGnify website](https://www.ebi.ac.uk/metagenomics) through deep links.
 
@@ -84,6 +84,7 @@ During BioHackathon Europe 2022, we therfore developed a Jupyter Lab user interf
 The extension provides a help panel with explaining how the notebooks relate to the broader MGnify resource, and a menubar list of links to the resources as shown in figure \ref{help-extension}
 
 We envisage this being useful for:
+
 - users discovering the notebook on Galaxy to learn more about MGnify
 - users needing quick access to MGnify's interactive API browser when fetching data in notebooks
 - users working on the ShinyProxy deployment looking for an environment to save and resume their work.
@@ -124,7 +125,7 @@ During BioHackathon Europe 2022, we created a python notebook providing a non-ex
 This notebook is divided in five main sections, conceptually building from introducing basic libraries to access and plot the data up to comparing user-generated genomes against the MGnify resource.
 
 ### Basic libraries
-The first section provide the users with a example of python libraries that can be used to explore and plot data retrieved from the genome API. 
+The first section provide the users with a example of Python libraries that can be used to explore and plot data retrieved from the genome API. 
 
 ### Data access
 The second section illustrates how to query the [`genomes`](https://www.ebi.ac.uk/metagenomics/api/v1/genomes) database from the MGnify API \ref{connect-to-MGnify's-API}, as well as how to save queried data and reload previously saved data.
@@ -172,7 +173,7 @@ The signature is then used for searching a correspondance(s) within the [`MAGs c
 
 The code and examples used in this notebook allow to illustrate what the users can do from the genomes MGnify's API and allow less experimented users to re-use sample code for their own purpose. 
 Additional notebooks are planned to enrich the collection, such as a notebook illustrating how to plot data on map \ref{maps}.
-![Map examples: a) Interactive map representing the number of genomes according to their geographical origin. Hovering continents with the mouse curser allows to see the exact count per continent. b) Interactive map representing the localisation of the samples. Each blue dots represents the proportion of samples for a given longitude-latitude set. c) Zoom in b) on a sampling region of interest. d) In addition to the number of samples and the longitude and latitude, hovering the blue dots with the mouse cursor allow the users to display additional related information such as the ID of the study, the sample IDs and the genome IDs, when available. \label{graphics}](./figures/maps.png)
+![Map examples: a) Interactive map representing the number of genomes according to their geographical origin. Hovering continents with the mouse curser allows to see the exact count per continent. b) Interactive map representing the localisation of the samples. Each blue dots represents the proportion of samples for a given longitude-latitude set. c) Zoom in b) on a sampling region of interest. d) In addition to the number of samples and the longitude and latitude, hovering the blue dots with the mouse cursor allow the users to display additional related information such as the ID of the study, the sample IDs and the genome IDs, when available. \label{maps}](./figures/maps.png)
 
 # Discussion
 MGnify's publicly available Jupyter Lab instances and notebooks are a collection of resources to empower the microbiome resarch community with streamlines access to EMBL-EBI's metagenomic-derived datasets. Though "code as documentation" and ready-to-use compute environments, users can acomplish short programmatic access tasks – like building a TSV file of data requiring multiple API requests – or follow more in-depth analysis workflows than are possible on the MGnify website – like cross-study comparisons.
