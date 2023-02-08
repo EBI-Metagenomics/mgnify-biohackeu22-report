@@ -91,7 +91,7 @@ We envisage this being useful for:
 
 - users discovering the notebook on Galaxy to learn more about MGnify,
 - users needing quick access to MGnify's interactive API browser when fetching data in notebooks,
-- users working on the ShinyProxy deployment looking for an environment to save and resume their work.
+- users working on the EMBL's Bio-IT ShinyProxy deployment looking for an environment to save and resume their work.
 
 ![MGnify-specific guidance is provided in a Jupyter Lab user interface extension. \label{help-extension}](./figures/help-extension.png)
 
@@ -115,7 +115,7 @@ For example, a user could load a MGnify genome and its GFF annotation file, and 
 ## Integration between MGnify's Protein Database and ESM Atlas
 Predicting the 3D structure of proteins is a crucial step in understanding their biology. Meta AI's ESMFold [@citesAsPotentialSolution:ESMfold2] is a tool designed for this purpose, using machine learning for protein structure prediction.
 
-The [ESM Metagenomic Atlas](https://esmatlas.com/) is a comprehensive repository of protein structures that have been generated using the ESMFold tool, sourced from the MGnify Protein Database. It serves as a convenient resource for researchers interested in exploring and comparing the structures of proteins predicted by ESMFold. However, the Atlas currently lacks easily accessible metadata for the proteins. This information is stored in flat files on the MGnify FTP server, which can be difficult for many users to access. During the BioHackathon Europe 2022, our team worked on a prototype for a web API that would provide access to this metadata stored in the MGnify Protein Database.
+The [ESM Metagenomic Atlas](https://esmatlas.com/) is a comprehensive repository of protein structures that have been generated using the ESMFold tool, sourced from the MGnify Protein Database. It serves as a convenient resource for researchers interested in exploring and comparing the structures of proteins predicted by ESMFold. However, the Atlas currently lacks easily accessible metadata for the proteins. This information is stored in flat files on the [MGnify FTP server](ftp://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database/current_release/), which can be difficult for many users to access. During BioHackathon Europe 2022, our team worked on a prototype for a web API that would provide access to this metadata stored in the MGnify Protein Database.
 
 We explored the potential of combining the Atlas web API and the newly developed API to integrate protein structure with metadata by using a Jupyter notebook. This approach allows researchers to easily access and analyze protein structure and metadata from both MGnify and the Atlas within a single platform. 
 
@@ -185,7 +185,7 @@ The MGnify genomes resource provides geographic extent information for each MAG,
 The code and examples used in this notebook illustrate the range of data and features in MGnify's genomes API, and allow less experimented users to re-use sample code for their own purpose. 
 
 # Discussion
-MGnify's publicly available Jupyter Lab instances and notebooks are a collection of resources to empower the microbiome research community with streamlined access to EMBL-EBI's metagenomic-derived datasets. 
+MGnify's publicly available Jupyter Lab instances and notebooks are a collection of resources that aim to empower the microbiome research community with streamlined access to EMBL-EBI's metagenomic-derived datasets. 
 Through "code as documentation" and ready-to-use compute environments, users can acomplish short programmatic access tasks (like building a TSV file of data requiring multiple API requests) or follow more in-depth analysis workflows than are possible on the MGnify website (like cross-study comparisons).
 
 During and around BioHackathon Europe 2022, we developed this resource at multiple levels.
